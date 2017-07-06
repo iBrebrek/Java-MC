@@ -1,0 +1,167 @@
+
+
+
+
+
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    	<title>
+			Prijava
+			
+			 - Ferko
+		</title>
+		<link rel="shortcut icon" href="img/favicon.ico" />
+		
+		<link rel="stylesheet" href="/ferko/css/style.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="/ferko/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" />
+		<script type="text/javascript" src="/ferko/js/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="/ferko/js/jquery-ui-1.7.2.custom.min.js"></script>
+		<script type="text/javascript" src="/ferko/js/ferko-custom-tabview.js"></script>
+		
+	</head>
+	<body>
+		<div class="mainWrapper">
+		
+
+
+<div id="header" class="container">
+	<div class="logo"><a href="/ferko/Main.action">FER</a></div>
+
+	<div id="infoBox" style="text-align:right;">
+	
+	
+		<span>Anonimni korisnik</span>
+		<a href="/ferko/Login.action">Prijava</a>
+	
+		<div id="searchBox">
+			<form action=".">
+			<p><input type="text" name="search" /></p>
+			</form>
+		</div>
+	</div>
+
+	<ul class="mainNav">
+		<li><a href="/ferko/Main.action" >Početna</a></li>
+		<li><a href="#" >Kolegiji</a></li>
+		<li><a href="/ferko/ForumIndex.action">Forum</a></li>
+		<li><a href="/ferko/EPortfolio.action">e-portfolio</a></li>
+	</ul>
+</div>
+
+		
+
+
+<div id="body" class="container">
+	<script type="text/javascript">
+		$(document).ready(function() {
+     		$("#Login_username").focus();
+		});
+	</script>
+
+	<h1>Prijava</h1>
+	
+
+	<!--div style="color:red; padding-bottom: 20px;">Postovani korisnici, prijava na Ferka putem korisnickih podataka s FERWeba privremeno je onemogucena uslijed 
+                               promjena u kriptografskim parametrima koje (od jucer?) koristi FERWeb. Cim otkrijem kako korigirati klijentski dio Ferka koji
+                               koristi uslugu autentifikacije na FERWebu, sve bi opet trebalo proraditi. U meduvremenu Ferku mozete pristupiti tako da na bilo
+                               kojoj stranici kolegija na FERWebu koja prikazuje ikonicu "Ferko" jednostavno kliknete na tu ikonu (uz pretpostavku da je svježe 
+                               generirana; ako nije, napravite "refresh" pa kliknite na nju.<br>
+                               (2016-02-20 10:00).</div-->	
+	<!--div style="color:red; padding-bottom: 20px;">Postovani korisnici, nakon nestanka struje cini se da postoje problemi pri komunikaciji s autorizacijskim posluziteljem pa je moguce da prijava
+                                na sustav ne uspije. Pokusajte direktno preko stranice na FERWebu kliknuti na ikonicu Ferko na nekoj od stranica koje prikazuju tu ikonicu.
+                                (2015-05-15 12:42).</div-->	
+	<div class="login-left">
+		<form id="Login" action="/ferko/Login.action" method="post"
+ class="cmxform"
+>
+<fieldset>
+<ol>
+
+			<li>
+<label 
+	 for="Login_username" >Korisničko ime</label>
+<input type="text" name="username" value="" id="Login_username"/>
+</li>
+
+			
+			
+			<li>
+<label 
+	 for="Login_password">Zaporka</label>
+<input type="password" name="password" id="Login_password"
+/>
+
+</li>
+
+			
+
+			<li class="formHidden">
+<input type="hidden" name="attempt" value="yes" id="Login_attempt"/>
+</li>
+
+			<li class="formSubmit">
+<input type="submit" id="Login_0" value="Prijava"/>
+</li>
+
+		</ol>
+</fieldset>
+</form>
+
+
+
+
+	</div>
+	<div class="login-right"><!--
+		Koristi drugi korisnički račun
+		
+		
+			<form id="LoginOpenID" action="/ferko/LoginOpenID.action" method="post"
+ class="cmxform"
+>
+<fieldset>
+<ol>
+
+				<input type="hidden" name="provider" value="Google" />
+				<input type="image" name="Google" src="img/loginLogos/Google.png" alt="Google"/>
+			</ol>
+</fieldset>
+</form>
+
+
+
+
+		-->
+	</div>
+</div>
+
+<div style="margin-left: 40px; margin-top: 30px; clear: both; float: left;">Problemi s prijavom? Druga pitanja? Možda Vam <a href="/ferko/LoginProblems.action">ovo</a> može pomoći.</div>
+
+		<div class="push">&nbsp;</div>
+		</div>
+		
+
+<div id="footer" class="container">
+<p> <a href="/ferko/About.action">O Ferku</a> | <a href="/ferko/Tutorials.action">Upute za korištenje Ferka</a> | 
+    <a href="http://www.fer.unizg.hr/">Fakultet elektrotehnike i računarstva</a>
+	<br/>
+	Odabir jezika: 
+	<a href="/ferko/Main.action?request_locale=en">English</a>, 
+	<a href="/ferko/Main.action?request_locale=hr">Hrvatski</a>
+</p>
+</div>
+
+                <script type="text/javascript">
+                   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                <script type="text/javascript">
+                   var pageTracker = _gat._getTracker("UA-5503250-1");
+                   pageTracker._trackPageview();
+                </script>
+
+	</body>	
+</html>

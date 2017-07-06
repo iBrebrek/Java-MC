@@ -1,0 +1,4 @@
+prilikom ispisa na sysout će se vidjet razmak i po tom se zna da su dobro grupirani u elemente
+{$ FOR i"1"0"2"$}
+	{$= si@f"aa"*55-5.5+"bb"@a_m"5+5-2"+-*/$}
+{$ END $}

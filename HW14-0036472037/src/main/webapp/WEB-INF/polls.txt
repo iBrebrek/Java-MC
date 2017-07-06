@@ -1,0 +1,13 @@
+
+#Za svaku anketu potrebno je navesti ime, poruku i ime fajla u kojemu su ponuđene opcije.
+#Redosljed u ovome fajlu mora biti:
+#IME_ANKETE{tab}PORUKA_ANKETE{tab}FILE_S_OPCIJAMA
+
+#u fajlu koji sadrži opcije redosljed mora biti:
+#IME{tab}LINK
+
+#ako želite dodati novu anektu samo dodaje u ovome fajlu novu liniju 
+#i napravite novi dokument s opcijama, pri tome se držite gore navedenih pravila
+
+Voting for best band	Click on the link to vote for the band.	/WEB-INF/options_bands.txt
+Voting for favorite series	Click on series name to vote for it.	/WEB-INF/options_series.txt

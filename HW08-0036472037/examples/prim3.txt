@@ -1,0 +1,49 @@
+			load r0, @msg
+			echo r0
+			iinput @number
+			load r10, @number
+			push r10
+			call @fib				; result will be stored in r10
+			load r0, @result
+			echo r0
+			echo r10
+			increment r15 			; can work without this, but just to "clear" stack
+			halt
+
+			
+@fib:		move r7, [r15 + 2] 
+			move r0, 0
+			move r1, 1
+			testEquals r7, r0
+			jumpIfTrue @is0
+			testEquals r7, r1
+			jumpIfTrue @is1
+			move r1, -1
+			add r1, r7, r1
+			push r1
+			call @fib
+			increment r15
+			push r10
+			move r2, -2
+			move r7, [r15 + 3]
+			add r2, r7, r2
+			push r2
+			call @fib
+			increment r15
+			pop r11
+			add r10, r11, r10
+			ret
+
+@is1:		move r10, 1
+			ret
+			
+@is0:		move r10, 0
+			ret
+			
+@number:	DEFINT 	0
+
+@msg:		DEFSTR "Fibonacci sequence f(n)\nn = "
+@result:	DEFSTR "f(n) = "
+			
+			RESERVE:20
+@stackTop:	RESERVE

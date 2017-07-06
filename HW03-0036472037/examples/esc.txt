@@ -1,0 +1,10 @@
+primjeri sa escape:
+text:
+backslash \\ 
+not tag: \{$ FOR a"a""b""c" $}
+
+tags: (usput se vidi case-insensitive tagova)
+{$fOr i i i                        
+				$} 
+{$            End           $}
+{$=neka_varijabla_7  "primjeri za esc u stringu:\r\"\t\\\n"$}

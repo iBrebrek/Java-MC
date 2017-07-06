@@ -1,0 +1,39 @@
+			load r7, @start
+			load r8, @enter
+			load r9, @error
+			jump @read
+		
+@read:		echo r7					; print start msg
+			iinput @number			; try to read number
+			jumpIfTrue @prepare		; if number is integer go to prepare
+			echo r9					; write that number is not good
+			jump @read				; go read again
+		
+@prepare:	load r7, @msg1			
+			echo r7					; write how many numbers will be printed (part 1)
+			load r1, @howmany		; store how many number to print in r1
+			echo r1					; write how many numbers will be printed (part 2)
+			load r7, @msg2	
+			echo r7					; write how many numbers will be printed (part 3)
+			load r0, @number 		; store read number in r0
+			add r2, r0, r1			; last number that will be printed in r2
+			jump @print				; go print those numbers
+		
+@print:		testEquals r2, r0		; check if over
+			jumpIfTrue @end			; if over end it
+			increment r0			; increase number
+			echo r0					; write next number
+			echo r8					; print enter
+			jump @print				; go print next number
+		
+@end:		halt
+
+
+@start:		DEFSTR "Unesite početni broj: "
+@enter:		DEFSTR "\n"
+@error:		DEFSTR "Unos nije moguće protumačiti kao cijeli broj.\n"
+@msg1:		DEFSTR "Sljedećih "
+@msg2:		DEFSTR " brojeva je:\n"
+
+@number:	DEFINT 0	; undefined until iinput writes in it
+@howmany:	DEFINT 5	; how many number will be printed
