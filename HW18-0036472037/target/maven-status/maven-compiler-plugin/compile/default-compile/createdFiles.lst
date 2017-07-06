@@ -1,0 +1,8 @@
+hr\fer\zemris\java\webapps\gallery\Album.class
+hr\fer\zemris\java\webapps\gallery\AlbumDB.class
+hr\fer\zemris\java\webapps\gallery\Picture.class
+hr\fer\zemris\java\webapps\gallery\servlets\GetThumbnailsServlet.class
+hr\fer\zemris\java\webapps\gallery\servlets\GetTagsServlet.class
+hr\fer\zemris\java\webapps\gallery\servlets\GetPictureServlet.class
+hr\fer\zemris\java\webapps\gallery\servlets\ShowPictureServlet.class
+hr\fer\zemris\java\webapps\gallery\servlets\IndexServlet.class
